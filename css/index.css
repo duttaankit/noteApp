@@ -1,5 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Fira+Sans&family=Inconsolata&family=Kanit&family=Roboto+Condensed&family=Rubik&family=Titillium+Web&display=swap');
+:root {
+  --tColor: #284387;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  /* font-family: 'Dosis', sans-serif; */
+  /* font-family: 'Fira Sans', sans-serif; */
+
+  /* font-family: 'Inconsolata', monospace; */
+  /* font-family: 'Kanit', sans-serif; */
+  font-family: 'Rubik', sans-serif;
+
+  /* font-family: 'Titillium Web', sans-serif; */
+}
+.header {
+  background-color: #fff;
+  border: 1px solid #fff;
+  box-shadow: 0px 2px 5px #ccc;
+  padding: 11px 0px 11px 0px;
+  /* text-align: center; */
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.heading {
+  color: var(--tColor);
+  font-size: 31px;
+  font-family: 'Rubik', sans-serif;
+}
+.addBtn {
+  border: 1.85px dashed var(--tColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px 9px 7px 9px;
+  border-radius: 4px;
+  color: var(--tColor);
+  font-size: 16.5px;
+  background: #fff;
+  font-weight: bold;
+  margin: 10px 0px 10px 17px;
+}
+.addIcon {
+  margin-right: 5px;
+}
+.noteDivW {
+  margin-top: 115px;
+}
+.noteDiv {
+  /* display: none; */
+  height: auto;
+  width: 96%;
+  box-shadow: 0px 2px 5px #ccc;
+  border-radius: 5px;
+  margin-left: 8px;
+  margin-bottom: 20px;
+  /* padding: 10px; */
+  padding-top: 1px;
+  background-color: #fff;
+}
+.noteDivH {
+  /* border-bottom: 1.45px solid #e4e9ed; */
+}
+.noteDivT {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 17px;
+  text-transform: capitalize;
+  color: var(--tColor);
+}
+.noteDivN {
+  margin: 17px 17px 17px 23px;
+  text-transform: capitalize;
+  color: #57606f;
+}
+.dateTime {
+  margin: 14px 17px 17px 50px;
+  font-style: italic;
+  font-size: 13.56px;
+  color: var(--tColor);
+}
+.noteDivF {
+  display: flex;
+  align-items: center;
+  background-color: #efcfe3;
+  width: 100%;
+  border-radius: 5px;
+}
+button {
+  border: none;
+  background: none;
+}
+.editDel {
+  margin-left: 20px;
+}
+.del {
+  margin-left: 20px;
+  color: #f64747;
+}
+
+.edit {
+  color: #16a085;
+}
+.nothingTS {
+  margin-top: 320px;
+  text-align: center;
+  color: #6c7a89;
+  display: none;
+}
+.spAdd {
+  color: var(--tColor);
+  border: none;
+  background: none;
+}
+.addND {
+  position: absolute;
+  top: -200%;
+  left: 50%;
+  transform: translate(-50%,-50%) scale(0.5);
+  box-shadow: 0px 2px 5px #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  background: #fff;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 300ms ease-in-out,
+  top 1000ms ease-in-out,
+  transform 1000ms ease-in-out;
+}
+.addND.active {
+  top: 50%;
+  transform: translate(-50%,-50%) scale(1);
+  opacity: 1;
+  transition: transform 300ms cubic-bezier(0.18,0.89,0.43,1.19);
+}
+#header {
+  text-align: center;
+  margin-bottom: 18px;
+  color: var(--tColor);
+}
+.in-gr input,textarea {
+  width: 300px;
+  border-radius: 3px;
+  border: 1.33px solid #6c7a89;
+  color: var(--tColor);
+}
+.in-gr {
+  margin-bottom: 10px;
+}
+.in-gr input {
+  padding: 8px 11px;
+}
+textarea {
+  padding: 8px 11px;
+  height: 100px;
+}
+#sbtn {
+  border-radius: 3px;
+  background: var(--tColor);
+  padding: 8px 11px;
+  border: 1.33px solid var(--tColor);
+  color: #fff;
+  width: 300px;
+}
+.in-gr input:focus,textarea:focus {
+  border: 1.34px solid var(--tColor);
+  outline: none;
+}
+.errTxt {
+  margin-left: 8px;
+  font-size: 11px;
+  color: red;
+  font-weight: bold;
+}
+.clBtn {
+  position: absolute;
+  color: red;
+  margin-left: 280px;
+}
+#wrapper.active {
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.6;
 }
