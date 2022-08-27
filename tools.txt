@@ -1,0 +1,25 @@
+#Tools For Web Devlopment :- 
+
+ 1.Icon -> Material Icon,Feather Icon;
+ 
+ 2.Images -> pexels,pixabay,unsplash,mixkit;
+ 
+ 3.CSS Colors -> coolors.co,flatuicolorpicker.com,Material Color;
+ 
+ 4.Rest API -> JSONPlaceholder;
+ 
+ 5.Image Compressor -> compressor.io;
+ 
+ 6.HTML Template -> freehtml5;
+ 
+ 7.illustration -> unDraw,openpeeps,humaaans;
+ 
+ 8.Gradient Color -> https://www.css-gradient.com/;
+ 
+ 9.CSS Clip-Path -> cllipy;
+ 
+ 10.Triangle Background -> triangify;
+ 
+ 11.CSS Wave Border -> Getwaves;
+ 
+ 12.CSS Border Genrator -> 9elements.github.io/fancy-border-radius;
