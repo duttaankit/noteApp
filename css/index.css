@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis&family=Fira+Sans&family=Inconsolata&family=Kanit&family=Roboto+Condensed&family=Rubik&family=Titillium+Web&display=swap');
 :root {
-  --tColor: #284387;
+  --tColor: #cf2f74;
 }
 * {
   margin: 0;
@@ -66,7 +66,7 @@
   background-color: #fff;
 }
 .noteDivH {
-  /* border-bottom: 1.45px solid #e4e9ed; */
+  border-bottom: 1.45px solid #e4e9ed;
 }
 .noteDivT {
   font-size: 22px;
@@ -81,7 +81,7 @@
   color: #57606f;
 }
 .dateTime {
-  margin: 14px 17px 17px 50px;
+  margin: 14px 17px 17px 60px;
   font-style: italic;
   font-size: 13.56px;
   color: var(--tColor);
@@ -89,9 +89,7 @@
 .noteDivF {
   display: flex;
   align-items: center;
-  background-color: #efcfe3;
   width: 100%;
-  border-radius: 5px;
 }
 button {
   border: none;
@@ -119,7 +117,7 @@ button {
   border: none;
   background: none;
 }
-.addND {
+.addND,.editND {
   position: absolute;
   top: -200%;
   left: 50%;
@@ -134,12 +132,13 @@ button {
   top 1000ms ease-in-out,
   transform 1000ms ease-in-out;
 }
-.addND.active {
+.addND.active,.editND.active {
   top: 50%;
   transform: translate(-50%,-50%) scale(1);
   opacity: 1;
   transition: transform 300ms cubic-bezier(0.18,0.89,0.43,1.19);
 }
+
 #header {
   text-align: center;
   margin-bottom: 18px;
@@ -161,7 +160,7 @@ textarea {
   padding: 8px 11px;
   height: 100px;
 }
-#sbtn {
+#sbtn,#sebtn {
   border-radius: 3px;
   background: var(--tColor);
   padding: 8px 11px;
@@ -188,4 +187,16 @@ textarea {
   pointer-events: none;
   user-select: none;
   opacity: 0.6;
+}
+.parsley-errors-list li.parsley-required {
+  padding: 0px;
+  padding-left: 3px;
+  list-style-type: none;
+  margin: 0px;
+  width: 100%;
+}
+.parsley-errors-list {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
 }

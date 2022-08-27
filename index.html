@@ -22,42 +22,44 @@
       </button>
     </div>
 
+
+
     <div class='noteDivW'>
       <div class="nothingTS">
         <h2>Nothing to Show,<span class="spAdd" type='button'>Add Note</span></h2>
       </div>
 
-      <div class='noteDiv'>
+      <!--       <div class="noteDiv">
 
-        <div class="noteDivH">
-          <div class="noteDivT">
-            Friday party with freinds
-          </div>
-          <div class="noteDivN">
-            Me,Subhadip,Debojit,Rohan,Bijay,Samin and Bura will have party in dominos,siliguri on 12th September
-          </div>
-        </div>
+                                                                          <div class="noteDivH">
+                                                                            <div class="noteDivT">
+                                                                              Friday party with freinds
+                                                                            </div>
+                                                                            <div class="noteDivN">
+                                                                              Me,Subhadip,Debojit,Rohan,Bijay,Samin and Bura will have party in dominos,siliguri on 12th September
+                                                                            </div>
+                                                                          </div>
 
-        <div class="noteDivF">
+                                                                          <div class="noteDivF">
 
-          <div class='editDel'>
-            <button><span class="material-icons edit">
-              edit_note
-            </span></button>
-            <button><span class="material-icons del">
-              delete
-            </span></button>
-          </div>
+                                                                            <div class="editDel">
+                                                                              <button><span class="material-icons edit">
+                                                                                edit_note
+                                                                              </span></button>
+                                                                              <button><span class="material-icons del">
+                                                                                delete
+                                                                              </span></button>
+                                                                            </div>
 
-          <div class='dateTime'>
-            <p>
-              Thursday, Aug 12 2022 at 12:08
-            </p>
-          </div>
+                                                                            <div class="dateTime">
+                                                                              <p>
+                                                                                Thursday, Aug 12 2022 at 12:08
+                                                                              </p>
+                                                                            </div>
 
-        </div>
+                                                                          </div>
 
-      </div>
+                                                                        </div> -->
 
 
 
@@ -79,12 +81,12 @@
         <form id="noteF" novalidate enctype="multipart/form-data" autocomplete="off" action="#">
 
           <div class="in-gr">
-            <input type="text" id="nTitle" placeholder="Title" required>
+            <input type="text" id="nTitle" placeholder="Title" required data-parsley-errors-container="#tTxt" minlength="1" maxlength="35" data-parsley-pattern="^[A-Za-z0-9 ,-_=:;!()@.#|/*&%$°—+×÷‘’›»‹«{}?<>“”¢£€¥]+$">
             <span class="errTxt" id="tTxt"></span>
           </div>
 
           <div class="in-gr">
-            <textarea id="nNote" placeholder="Note..." required></textarea>
+            <textarea id="nNote" placeholder="Note..." required data-parsley-errors-container="#nTxt" minlength="1" maxlength="200" data-parsley-pattern="^[A-Za-z0-9 ,-_=:;!()@.#|/*&%$°—+×÷‘’›»‹«{}?<>“”¢£€¥]+$"></textarea>
             <span class="errTxt" id="nTxt"></span>
           </div>
 
@@ -97,7 +99,38 @@
     </div>
   </div>
 
+  <div class="editND">
+    <div class="frm-cont">
 
+      <div class="clBtn">
+        <span class="material-icons">
+          close
+        </span>
+      </div>
+      <div id="header">
+        <h2>Edit Note</h2>
+      </div>
+      <div id="frm-div">
+        <form id="noteE" novalidate enctype="multipart/form-data" autocomplete="off" action="#">
+
+          <div class="in-gr">
+            <input type="text" id="neTitle" placeholder="Title" required data-parsley-errors-container="#teTxt" minlength="1" maxlength="35" data-parsley-pattern="^[A-Za-z0-9 ,-_=:;!()@.#|/*&%$°—+×÷‘’›»‹«{}?<>“”¢£€¥]+$">
+            <span class="errTxt" id="teTxt"></span>
+          </div>
+
+          <div class="in-gr">
+            <textarea id="neNote" placeholder="Note..." required data-parsley-errors-container="#neTxt" minlength="1" maxlength="200" data-parsley-pattern="^[A-Za-z0-9 ,-_=:;!()@.#|/*&%$°—+×÷‘’›»‹«{}?<>“”¢£€¥]+$"></textarea>
+            <span class="errTxt" id="neTxt"></span>
+          </div>
+
+          <div>
+            <input type="submit" id="sebtn" value="Update Note">
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
 
   <script src="js/date.js"></script>
   <script src="js/index.js"></script>
